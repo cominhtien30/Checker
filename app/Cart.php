@@ -47,7 +47,7 @@ class Cart extends Model
         $this->products[$id]['quantity']=$quantity;
         $this->products[$id]['price']=$this->products[$id]['productInfo']->price*$quantity;
         //cập nhật lại
-        $this->totalQuantity+=$this->products[$id]['quantity'];
+        $this->totalQuantity=$this->totalQuantity+$this->products[$id]['quantity'];
         $this->totalPrice+=$this->products[$id]['price'];
     }
 }
